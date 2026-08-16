@@ -23,7 +23,7 @@ const items = [
     name: "UVSA Gloves",
     type: "Gloves",
     league: "UVSA",
-    rarity: "Rare",
+    rarity: "RARE",
     existing: 8,
     image: "image.png"
   },
@@ -84,6 +84,7 @@ function renderItems(list) {
       card.innerHTML = `
         <img src="${item.image}" alt="${item.name}" onclick="showDetails('${item.name}')">
         <p>${item.name}</p>
+
         <label class="owned-label">
           <input type="checkbox" class="owned-checkbox">
           Owned
@@ -110,6 +111,15 @@ function sortLeague() {
 function sortRarity() {
   const sorted = [...items].sort((a, b) => a.rarity.localeCompare(b.rarity));
   renderItems(sorted);
+}
+
+// ===============================
+// RARITY FILTER
+// ===============================
+
+function filterRarity(rarity) {
+  const filtered = items.filter(item => item.rarity.toUpperCase() === rarity.toUpperCase());
+  renderItems(filtered);
 }
 
 // ===============================
