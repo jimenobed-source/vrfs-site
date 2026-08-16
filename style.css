@@ -108,6 +108,10 @@ button {
     font-size: 36px;
   }
 
+  p {
+    font-size: 18px;
+  }
+
   button {
     width: 100%;
     padding: 16px;
@@ -117,6 +121,12 @@ button {
   .item-row {
     flex-direction: column;
     gap: 20px;
+    overflow-x: visible;
+  }
+
+  .item-card {
+    flex: none;
+    width: 100%;
   }
 
   .item-card img {
