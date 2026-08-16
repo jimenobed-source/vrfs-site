@@ -17,15 +17,15 @@ const items = [
   },
   {
     name: "UVSA Gloves",
-    type: "Glasses",
+    type: "Gloves",
     league: "UVSA",
     rarity: "Rare",
     existing: 8,
-    image: "images/image.png"
+    image: "image.png"
   }, 
   {
     name: "UVSA Cat Mask",
-    type: "Glasses",
+    type: "mask",
     league: "UVSA",
     rarity: "INSANE",
     existing: 2,
@@ -33,19 +33,19 @@ const items = [
   }, 
   {
     name: "UVSA MIDNIGHT MASK",
-    type: "Glasses",
+    type: "mask",
     league: "UVSA",
     rarity: "INSANE",
     existing: 2,
     image: "UVSA MIDNIGHT MASK.png"
   }, 
   {
-    name: "UVSA Gloves",
-    type: "Glasses",
+    name: "UVSA Midnight Hat",
+    type: "Hat",
     league: "UVSA",
-    rarity: "Rare",
-    existing: 8,
-    image: "images/image.png"
+    rarity: "INSANE",
+    existing: 2,
+    image: "uvsa misnight hat.png"
   },
 ];
 
