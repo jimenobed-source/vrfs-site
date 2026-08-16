@@ -1,9 +1,17 @@
+/* ===========================
+   GLOBAL STYLES
+   =========================== */
+
 body {
   margin: 0;
   font-family: Arial, sans-serif;
   background: #111827;
   color: white;
 }
+
+/* ===========================
+   NAVIGATION
+   =========================== */
 
 nav {
   height: 70px;
@@ -22,7 +30,12 @@ nav a {
   color: white;
   text-decoration: none;
   margin-left: 25px;
+  font-size: 16px;
 }
+
+/* ===========================
+   MAIN CONTENT
+   =========================== */
 
 main {
   text-align: center;
@@ -50,6 +63,10 @@ button {
   cursor: pointer;
 }
 
+/* ===========================
+   ITEM SECTIONS
+   =========================== */
+
 #items section {
   margin: 40px 0;
 }
@@ -61,6 +78,10 @@ button {
   padding-bottom: 10px;
 }
 
+/* ===========================
+   ITEM ROWS
+   =========================== */
+
 .item-row {
   display: flex;
   gap: 25px;
@@ -68,16 +89,24 @@ button {
   padding: 20px 0;
 }
 
+/* ===========================
+   ITEM CARDS
+   =========================== */
+
 .item-card {
   flex: 0 0 220px;
+  background: #1f2937;
+  padding: 15px;
+  border-radius: 12px;
+  text-align: center;
 }
 
 .item-card img {
-  width: 220px;
-  height: 220px;
+  width: 100%;
+  height: auto;
   object-fit: contain;
-  cursor: pointer;
   border-radius: 12px;
+  cursor: pointer;
   transition: transform 0.2s;
 }
 
@@ -85,8 +114,12 @@ button {
   transform: scale(1.05);
 }
 
-/* --- MOBILE --- */
+/* ===========================
+   MOBILE (PHONES)
+   =========================== */
+
 @media (max-width: 600px) {
+
   nav {
     flex-direction: column;
     text-align: center;
@@ -125,7 +158,6 @@ button {
   }
 
   .item-card {
-    flex: none;
     width: 100%;
   }
 
@@ -135,8 +167,12 @@ button {
   }
 }
 
-/* --- DESKTOP --- */
+/* ===========================
+   DESKTOP (PC)
+   =========================== */
+
 @media (min-width: 900px) {
+
   nav {
     padding: 0 60px;
   }
