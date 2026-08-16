@@ -109,6 +109,112 @@ const items = [
     rarity: "COMMON",
     existing: 900,
     image: "VDL RED HAT.png"
+  },
+
+  // ===== VFA LEAGUE =====
+  {
+    name: "VFA Bobble Hat",
+    type: "Hat",
+    league: "VFA",
+    rarity: "LEGENDARY",
+    existing: 80,
+    image: "VFA Bobble Hat.png"
+  },
+  {
+    name: "VFA Glasses",
+    type: "Goggles",
+    league: "VFA",
+    rarity: "LEGENDARY",
+    existing: 70,
+    image: "VFA Glasses.png"
+  },
+  {
+    name: "VFA Black Half Mask",
+    type: "Mask",
+    league: "VFA",
+    rarity: "RARE",
+    existing: 100,
+    image: "VFA Black Half Mask.png"
+  },
+  {
+    name: "VFA Black Boot",
+    type: "Boots",
+    league: "VFA",
+    rarity: "LEGENDARY",
+    existing: 80,
+    image: "VFA Black Boot.png"
+  },
+  {
+    name: "VFA Bucket Hat",
+    type: "Hat",
+    league: "VFA",
+    rarity: "RARE",
+    existing: 150,
+    image: "VFA Bucket Hat.png"
+  },
+  {
+    name: "VFA Yellow Full Mask",
+    type: "Mask",
+    league: "VFA",
+    rarity: "LEGENDARY",
+    existing: 70,
+    image: "VFA Yellow Full Mask.png"
+  },
+  {
+    name: "VFA Glove",
+    type: "Gloves",
+    league: "VFA",
+    rarity: "SECRET",
+    existing: 6,
+    image: "VFA Glove.png"
+  },
+  {
+    name: "VFA Yellow Ball",
+    type: "Ball",
+    league: "VFA",
+    rarity: "LEGENDARY",
+    existing: 75,
+    image: "VFA Yellow Ball.png"
+  },
+  {
+    name: "VFA Grey Ball",
+    type: "Ball",
+    league: "VFA",
+    rarity: "LEGENDARY",
+    existing: 90,
+    image: "VFA Grey Ball.png"
+  },
+  {
+    name: "VFA Rising Stars",
+    type: "Boots",
+    league: "VFA",
+    rarity: "RARE",
+    existing: 210,
+    image: "VFA Rising Stars.png"
+  },
+  {
+    name: "VFA All Stars",
+    type: "Boots",
+    league: "VFA",
+    rarity: "RARE",
+    existing: 150,
+    image: "VFA All Stars.png"
+  },
+  {
+    name: "VFA Balon Dor Boot",
+    type: "Boots",
+    league: "VFA",
+    rarity: "SECRET",
+    existing: 15,
+    image: "VFA Balon Dor Boot.png"
+  },
+  {
+    name: "VFA UCL Boot",
+    type: "Boots",
+    league: "VFA",
+    rarity: "LEGENDARY",
+    existing: 60,
+    image: "VFA UCL Boot.png"
   }
 ];
 
