@@ -9,7 +9,7 @@ const items = [
     type: "Mask",
     league: "UVSA",
     rarity: "RARE",
-    existing: 12,
+    existing: 150,
     image: "UVSA PURPLE INJURY MASK.png"
   },
   {
@@ -17,7 +17,7 @@ const items = [
     type: "Boots",
     league: "UVSA",
     rarity: "UNCOMMON",
-    existing: 25,
+    existing: 400,
     image: "UVSA BOOT.png"
   },
   {
@@ -25,7 +25,7 @@ const items = [
     type: "Gloves",
     league: "UVSA",
     rarity: "RARE",
-    existing: 8,
+    existing: 150,
     image: "UVSA GLOVES.png"
   },
   {
