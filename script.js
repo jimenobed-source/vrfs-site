@@ -22,7 +22,31 @@ const items = [
     rarity: "Rare",
     existing: 8,
     image: "images/image.png"
-  }
+  }, 
+  {
+    name: "UVSA Cat Mask",
+    type: "Glasses",
+    league: "UVSA",
+    rarity: "INSANE",
+    existing: 2,
+    image: "UVSA Cat Mask.png"
+  }, 
+  {
+    name: "UVSA MIDNIGHT MASK",
+    type: "Glasses",
+    league: "UVSA",
+    rarity: "INSANE",
+    existing: 2,
+    image: "UVSA MIDNIGHT MASK.png"
+  }, 
+  {
+    name: "UVSA Gloves",
+    type: "Glasses",
+    league: "UVSA",
+    rarity: "Rare",
+    existing: 8,
+    image: "images/image.png"
+  },
 ];
 
 const container = document.getElementById("items");
