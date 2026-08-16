@@ -49,6 +49,7 @@ button {
   font-size: 16px;
   cursor: pointer;
 }
+
 #items section {
   margin: 40px 0;
 }
@@ -77,8 +78,74 @@ button {
   object-fit: contain;
   cursor: pointer;
   border-radius: 12px;
+  transition: transform 0.2s;
 }
 
 .item-card img:hover {
   transform: scale(1.05);
+}
+
+/* --- MOBILE --- */
+@media (max-width: 600px) {
+  nav {
+    flex-direction: column;
+    text-align: center;
+    height: auto;
+    padding: 20px 0;
+  }
+
+  nav a {
+    display: block;
+    margin: 10px 0;
+  }
+
+  main {
+    padding: 20px;
+    padding-top: 60px;
+  }
+
+  h1 {
+    font-size: 36px;
+  }
+
+  button {
+    width: 100%;
+    padding: 16px;
+    font-size: 18px;
+  }
+
+  .item-row {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .item-card img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+/* --- DESKTOP --- */
+@media (min-width: 900px) {
+  nav {
+    padding: 0 60px;
+  }
+
+  main {
+    padding-top: 120px;
+  }
+
+  h1 {
+    font-size: 64px;
+  }
+
+  .item-row {
+    display: flex;
+    gap: 30px;
+  }
+
+  .item-card img {
+    width: 240px;
+    height: 240px;
+  }
 }
