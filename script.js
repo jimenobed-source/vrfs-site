@@ -1,39 +1,40 @@
 // ===============================
-// ITEM DATA
+// VRFS INDEX ITEM DATA
 // ===============================
 
 const items = [
+  // ===== UVSA LEAGUE =====
   {
     name: "UVSA PURPLE INJURY MASK",
     type: "Mask",
     league: "UVSA",
     rarity: "RARE",
     existing: 12,
-    image: "images/tg_image_960266664.png"
+    image: "UVSA PURPLE INJURY MASK.png"
   },
   {
-    name: "UVSA Boots",
+    name: "UVSA BOOT",
     type: "Boots",
     league: "UVSA",
     rarity: "UNCOMMON",
     existing: 25,
-    image: "images/UVSA BOOT.png"
+    image: "UVSA BOOT.png"
   },
   {
-    name: "UVSA Gloves",
+    name: "UVSA GLOVES",
     type: "Gloves",
     league: "UVSA",
     rarity: "RARE",
     existing: 8,
-    image: "image.png"
+    image: "UVSA GLOVES.png"
   },
   {
-    name: "UVSA Cat Mask",
+    name: "UVSA CAT MASK",
     type: "Mask",
     league: "UVSA",
     rarity: "INSANE",
     existing: 2,
-    image: "UVSA Cat Mask.png"
+    image: "UVSA CAT MASK.png"
   },
   {
     name: "UVSA MIDNIGHT MASK",
@@ -44,12 +45,70 @@ const items = [
     image: "UVSA MIDNIGHT MASK.png"
   },
   {
-    name: "UVSA Midnight Hat",
+    name: "UVSA MIDNIGHT HAT",
     type: "Hat",
     league: "UVSA",
     rarity: "INSANE",
     existing: 2,
-    image: "uvsa misnight hat.png"
+    image: "UVSA MIDNIGHT HAT.png"
+  },
+
+  // ===== VDL LEAGUE =====
+  {
+    name: "VDL BLACK GLOVES",
+    type: "Gloves",
+    league: "VDL",
+    rarity: "LEGENDARY",
+    existing: 20,
+    image: "VDL BLACK GLOVES.png"
+  },
+  {
+    name: "VDL BLACK HAT",
+    type: "Hat",
+    league: "VDL",
+    rarity: "LEGENDARY",
+    existing: 20,
+    image: "VDL BLACK HAT.png"
+  },
+  {
+    name: "VDL RED BALL",
+    type: "Ball",
+    league: "VDL",
+    rarity: "LEGENDARY",
+    existing: 50,
+    image: "VDL RED BALL.png"
+  },
+  {
+    name: "VDL RED GOGGLES",
+    type: "Goggles",
+    league: "VDL",
+    rarity: "SECRET",
+    existing: 10,
+    image: "VDL RED GOGGLES.png"
+  },
+  {
+    name: "VDL RED BOOT",
+    type: "Boots",
+    league: "VDL",
+    rarity: "COMMON",
+    existing: 1000,
+    image: "VDL RED BOOT.png"
+  },
+  {
+    name: "VDL RED MASK",
+    type: "Mask",
+    league: "VDL",
+    rarity: "COMMON",
+    existing: 1000,
+    image: "VDL RED MASK.png"
+  },
+  {
+    name: "VDL RED HAT",
+    type: "Hat",
+    league: "VDL",
+    rarity: "COMMON",
+    existing: 900,
+    image: "VDL RED HAT.png"
   }
 ];
 
@@ -62,29 +121,27 @@ const container = document.getElementById("items");
 function renderItems(list) {
   container.innerHTML = "";
 
-  const categories = {};
+  const leagues = {};
 
   list.forEach(item => {
-    const letter = item.name[0].toUpperCase();
-    if (!categories[letter]) categories[letter] = [];
-    categories[letter].push(item);
+    if (!leagues[item.league]) leagues[item.league] = [];
+    leagues[item.league].push(item);
   });
 
-  Object.keys(categories).sort().forEach(letter => {
+  Object.keys(leagues).sort().forEach(league => {
     const section = document.createElement("section");
-    section.innerHTML = `<h2>${letter}</h2>`;
+    section.innerHTML = `<h2>${league}</h2>`;
 
     const row = document.createElement("div");
     row.className = "item-row";
 
-    categories[letter].forEach(item => {
+    leagues[league].forEach(item => {
       const card = document.createElement("div");
       card.className = "item-card";
 
       card.innerHTML = `
         <img src="${item.image}" alt="${item.name}" onclick="showDetails('${item.name}')">
         <p>${item.name}</p>
-
         <label class="owned-label">
           <input type="checkbox" class="owned-checkbox">
           Owned
