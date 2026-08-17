@@ -5,12 +5,12 @@
 const items = [
   // ===== UVSA LEAGUE =====
   {
-    name: "UVSA PURPLE INJURY MASK",
-    type: "Mask",
+    name: "UVSA balls",
+    type: "Ball",
     league: "UVSA",
-    rarity: "RARE",
-    existing: 150,
-    image: "UVSA PURPLE INJURY MASK.png"
+    rarity: "COMMON",
+    existing: 999,
+    image: "balls.png"
   },
   {
     name: "UVSA BOOT",
@@ -21,20 +21,12 @@ const items = [
     image: "UVSA BOOT.png"
   },
   {
-    name: "UVSA GLOVES",
-    type: "Gloves",
+    name: "UVSA cat mask",
+    type: "Mask",
     league: "UVSA",
     rarity: "RARE",
     existing: 150,
-    image: "UVSA GLOVES.png"
-  },
-  {
-    name: "UVSA CAT MASK",
-    type: "Mask",
-    league: "UVSA",
-    rarity: "INSANE",
-    existing: 2,
-    image: "UVSA CAT MASK.png"
+    image: "UVSA cat mask.png"
   },
   {
     name: "UVSA MIDNIGHT MASK",
@@ -45,15 +37,39 @@ const items = [
     image: "UVSA MIDNIGHT MASK.png"
   },
   {
-    name: "UVSA MIDNIGHT HAT",
+    name: "UVSA misnight hat",
     type: "Hat",
     league: "UVSA",
     rarity: "INSANE",
     existing: 2,
-    image: "UVSA MIDNIGHT HAT.png"
+    image: "Suvsa misnight hat.png"
+  },
+  {
+    name: "UVSA Purple Injury Mask",
+    type: "Mask",
+    league: "UVSA",
+    rarity: "RARE",
+    existing: 150,
+    image: "UVSA Purple Injury Mask.png"
   },
 
   // ===== VDL LEAGUE =====
+  {
+    name: "VDL Balon Dor Boot",
+    type: "Boots",
+    league: "VDL",
+    rarity: "SECRET",
+    existing: 15,
+    image: "VDL Balon Dor Boot.webp"
+  },
+  {
+    name: "VDL Beer Hat",
+    type: "Hat",
+    league: "VDL",
+    rarity: "LEGENDARY",
+    existing: 20,
+    image: "VDL Beer Hat.webp"
+  },
   {
     name: "VDL BLACK GLOVES",
     type: "Gloves",
@@ -63,28 +79,28 @@ const items = [
     image: "VDL BLACK GLOVES.png"
   },
   {
-    name: "VDL BLACK HAT",
+    name: "VDL Black Hat",
     type: "Hat",
     league: "VDL",
     rarity: "LEGENDARY",
     existing: 20,
-    image: "VDL BLACK HAT.png"
+    image: "VDL Black Hat png"
   },
   {
-    name: "VDL RED BALL",
-    type: "Ball",
+    name: "VDL Gas Mask",
+    type: "Mask",
     league: "VDL",
-    rarity: "LEGENDARY",
-    existing: 50,
-    image: "VDL RED BALL.png"
+    rarity: "RARE",
+    existing: 100,
+    image: "VDL Gas Mask.webp"
   },
   {
-    name: "VDL RED GOGGLES",
-    type: "Goggles",
+    name: "VDL Pink Boot",
+    type: "Boots",
     league: "VDL",
-    rarity: "SECRET",
-    existing: 10,
-    image: "VDL RED GOGGLES.png"
+    rarity: "RARE",
+    existing: 150,
+    image: "VDL Pink Boot.webp"
   },
   {
     name: "VDL RED BOOT",
@@ -92,7 +108,31 @@ const items = [
     league: "VDL",
     rarity: "COMMON",
     existing: 1000,
-    image: "VDL RED BOOT.png"
+    image: "VDL RED BOOT.webp"
+  },
+  {
+    name: "VDL RED BOOT",
+    type: "Boots",
+    league: "VDL",
+    rarity: "COMMON",
+    existing: 1000,
+    image: "VOL RED BOOT.png"
+  },
+  {
+    name: "VDL RED GOOGLES",
+    type: "Goggles",
+    league: "VDL",
+    rarity: "SECRET",
+    existing: 10,
+    image: "VDL RED GOOGLES.png"
+  },
+  {
+    name: "VDL RED HAT",
+    type: "Hat",
+    league: "VDL",
+    rarity: "COMMON",
+    existing: 900,
+    image: "VDL RED HAT. jPg"
   },
   {
     name: "VDL RED MASK",
@@ -103,15 +143,39 @@ const items = [
     image: "VDL RED MASK.png"
   },
   {
-    name: "VDL RED HAT",
-    type: "Hat",
+    name: "VDL UCL Boot",
+    type: "Boots",
     league: "VDL",
-    rarity: "COMMON",
-    existing: 900,
-    image: "VDL RED HAT.png"
+    rarity: "LEGENDARY",
+    existing: 60,
+    image: "VDL UCL Boot.webp"
+  },
+  {
+    name: "VDL Visor",
+    type: "Goggles",
+    league: "VDL",
+    rarity: "RARE",
+    existing: 150,
+    image: "VDL Visor.webp"
   },
 
   // ===== VFA LEAGUE =====
+  {
+    name: "VFA Balon dor Boot",
+    type: "Boots",
+    league: "VFA",
+    rarity: "SECRET",
+    existing: 15,
+    image: "VFA Balon dor Boot.png"
+  },
+  {
+    name: "VFA Black Boot",
+    type: "Boots",
+    league: "VFA",
+    rarity: "LEGENDARY",
+    existing: 80,
+    image: "VFA Black Boot.webp"
+  },
   {
     name: "VFA Bobble Hat",
     type: "Hat",
@@ -121,92 +185,52 @@ const items = [
     image: "VFA Bobble Hat.png"
   },
   {
-    name: "VFA Glasses",
-    type: "Goggles",
-    league: "VFA",
-    rarity: "LEGENDARY",
-    existing: 70,
-    image: "VFA Glasses.png"
-  },
-  {
-    name: "VFA Black Half Mask",
-    type: "Mask",
-    league: "VFA",
-    rarity: "RARE",
-    existing: 100,
-    image: "VFA Black Half Mask.png"
-  },
-  {
-    name: "VFA Black Boot",
-    type: "Boots",
-    league: "VFA",
-    rarity: "LEGENDARY",
-    existing: 80,
-    image: "VFA Black Boot.png"
-  },
-  {
     name: "VFA Bucket Hat",
     type: "Hat",
     league: "VFA",
     rarity: "RARE",
     existing: 150,
-    image: "VFA Bucket Hat.png"
+    image: "VA Bucket Hat.webp"
   },
   {
-    name: "VFA Yellow Full Mask",
-    type: "Mask",
+    name: "VFA Glasses",
+    type: "Goggles",
     league: "VFA",
     rarity: "LEGENDARY",
     existing: 70,
-    image: "VFA Yellow Full Mask.png"
+    image: "VFA Glasses.webp"
   },
   {
-    name: "VFA Glove",
+    name: "VFA glove",
     type: "Gloves",
     league: "VFA",
     rarity: "SECRET",
     existing: 6,
-    image: "VFA Glove.png"
+    image: "via glove.png"
   },
   {
-    name: "VFA Yellow Ball",
-    type: "Ball",
+    name: "VFA Half Mask",
+    type: "Mask",
     league: "VFA",
-    rarity: "LEGENDARY",
-    existing: 75,
-    image: "VFA Yellow Ball.png"
+    rarity: "RARE",
+    existing: 100,
+    image: "VFA Half Mask.webp"
   },
   {
-    name: "VFA Grey Ball",
-    type: "Ball",
+    name: "VFA Poc Item !",
+    type: "Misc",
     league: "VFA",
-    rarity: "LEGENDARY",
-    existing: 90,
-    image: "VFA Grey Ball.png"
+    rarity: "SECRET",
+    existing: 1,
+    image: "VEA Poc Item !.png"
   },
   {
-    name: "VFA Rising Stars",
+    name: "VFA Rising stars",
     type: "Boots",
     league: "VFA",
     rarity: "RARE",
     existing: 210,
-    image: "VFA Rising Stars.png"
-  },
-  {
-    name: "VFA All Stars",
-    type: "Boots",
-    league: "VFA",
-    rarity: "RARE",
-    existing: 150,
-    image: "VFA All Stars.png"
-  },
-  {
-    name: "VFA Balon Dor Boot",
-    type: "Boots",
-    league: "VFA",
-    rarity: "SECRET",
-    existing: 15,
-    image: "VFA Balon Dor Boot.png"
+    image: "VFA Rising stars.webp"
   },
   {
     name: "VFA UCL Boot",
@@ -215,6 +239,22 @@ const items = [
     rarity: "LEGENDARY",
     existing: 60,
     image: "VFA UCL Boot.png"
+  },
+  {
+    name: "VFA Yellow Full Mask",
+    type: "Mask",
+    league: "VFA",
+    rarity: "LEGENDARY",
+    existing: 70,
+    image: "VFA Yellow Full Mask.webp"
+  },
+  {
+    name: "VFA vfsalistars",
+    type: "Boots",
+    league: "VFA",
+    rarity: "RARE",
+    existing: 150,
+    image: "vfsalistars.png"
   }
 ];
 
