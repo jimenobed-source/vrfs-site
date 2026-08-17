@@ -9,28 +9,19 @@ const items = [
 const container = document.getElementById("items");
 
 // ===============================
-// LOAD & SAVE OWNERSHIP
+// LOAD SAVED OWNERSHIP
 // ===============================
 
 function loadOwnedStatus() {
-  try {
-    return JSON.parse(localStorage.getItem("ownedItems")) || {};
-  } catch {
-    return {};
-  }
+  const saved = JSON.parse(localStorage.getItem("ownedItems")) || {};
+  return saved;
 }
 
-function saveOwnedStatus() {
-  localStorage.setItem("ownedItems", JSON.stringify(ownedStatus));
+function saveOwnedStatus(status) {
+  localStorage.setItem("ownedItems", JSON.stringify(status));
 }
 
 let ownedStatus = loadOwnedStatus();
-
-// Toggle + save
-function toggleOwned(name, value) {
-  ownedStatus[name] = value;
-  saveOwnedStatus();
-}
 
 // ===============================
 // RENDER FUNCTION
@@ -57,14 +48,13 @@ function renderItems(list) {
       const card = document.createElement("div");
       card.className = "item-card";
 
-      const isOwned = ownedStatus[item.name] ? true : false;
+      const isOwned = ownedStatus[item.name] === true;
 
       card.innerHTML = `
         <img src="${item.image}" alt="${item.name}" onclick="showDetails('${item.name}')">
         <p>${item.name}</p>
         <label class="owned-label">
-          <input type="checkbox" class="owned-checkbox"
-            ${isOwned ? "checked" : ""}
+          <input type="checkbox" class="owned-checkbox" ${isOwned ? "checked" : ""} 
             onchange="toggleOwned('${item.name}', this.checked)">
           Owned
         </label>
@@ -76,6 +66,15 @@ function renderItems(list) {
     section.appendChild(row);
     container.appendChild(section);
   });
+}
+
+// ===============================
+// OWNED TOGGLE (SAVES FOREVER)
+// ===============================
+
+function toggleOwned(name, value) {
+  ownedStatus[name] = value;
+  saveOwnedStatus(ownedStatus);
 }
 
 // ===============================
@@ -107,7 +106,7 @@ function filterRarity(rarity) {
 
 function showDetails(name) {
   const item = items.find(i => i.name === name);
-  const isOwned = ownedStatus[name] ? true : false;
+  const isOwned = ownedStatus[name] === true;
 
   container.innerHTML = `
     <div class="item-details">
@@ -119,8 +118,7 @@ function showDetails(name) {
       <p>Existing: ${item.existing}</p>
 
       <label class="owned-label">
-        <input type="checkbox"
-          ${isOwned ? "checked" : ""}
+        <input type="checkbox" ${isOwned ? "checked" : ""} 
           onchange="toggleOwned('${item.name}', this.checked)">
         Owned
       </label>
