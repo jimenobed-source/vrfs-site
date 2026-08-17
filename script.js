@@ -3,25 +3,222 @@
 // ===============================
 
 const items = [
-  // ... your full items list stays the same ...
+  // ===== UVSA LEAGUE =====
+  {
+    name: "UVSA PURPLE INJURY MASK",
+    type: "Mask",
+    league: "UVSA",
+    rarity: "RARE",
+    existing: 150,
+    image: "UVSA PURPLE INJURY MASK.png"
+  },
+  {
+    name: "UVSA BOOT",
+    type: "Boots",
+    league: "UVSA",
+    rarity: "UNCOMMON",
+    existing: 400,
+    image: "UVSA BOOT.png"
+  },
+  {
+    name: "UVSA GLOVES",
+    type: "Gloves",
+    league: "UVSA",
+    rarity: "RARE",
+    existing: 150,
+    image: "UVSA GLOVES.png"
+  },
+  {
+    name: "UVSA CAT MASK",
+    type: "Mask",
+    league: "UVSA",
+    rarity: "INSANE",
+    existing: 2,
+    image: "UVSA CAT MASK.png"
+  },
+  {
+    name: "UVSA MIDNIGHT MASK",
+    type: "Mask",
+    league: "UVSA",
+    rarity: "INSANE",
+    existing: 2,
+    image: "UVSA MIDNIGHT MASK.png"
+  },
+  {
+    name: "UVSA MIDNIGHT HAT",
+    type: "Hat",
+    league: "UVSA",
+    rarity: "INSANE",
+    existing: 2,
+    image: "UVSA MIDNIGHT HAT.png"
+  },
+
+  // ===== VDL LEAGUE =====
+  {
+    name: "VDL BLACK GLOVES",
+    type: "Gloves",
+    league: "VDL",
+    rarity: "LEGENDARY",
+    existing: 20,
+    image: "VDL BLACK GLOVES.png"
+  },
+  {
+    name: "VDL BLACK HAT",
+    type: "Hat",
+    league: "VDL",
+    rarity: "LEGENDARY",
+    existing: 20,
+    image: "VDL BLACK HAT.png"
+  },
+  {
+    name: "VDL RED BALL",
+    type: "Ball",
+    league: "VDL",
+    rarity: "LEGENDARY",
+    existing: 50,
+    image: "VDL RED BALL.png"
+  },
+  {
+    name: "VDL RED GOGGLES",
+    type: "Goggles",
+    league: "VDL",
+    rarity: "SECRET",
+    existing: 10,
+    image: "VDL RED GOGGLES.png"
+  },
+  {
+    name: "VDL RED BOOT",
+    type: "Boots",
+    league: "VDL",
+    rarity: "COMMON",
+    existing: 1000,
+    image: "VDL RED BOOT.png"
+  },
+  {
+    name: "VDL RED MASK",
+    type: "Mask",
+    league: "VDL",
+    rarity: "COMMON",
+    existing: 1000,
+    image: "VDL RED MASK.png"
+  },
+  {
+    name: "VDL RED HAT",
+    type: "Hat",
+    league: "VDL",
+    rarity: "COMMON",
+    existing: 900,
+    image: "VDL RED HAT.png"
+  },
+
+  // ===== VFA LEAGUE =====
+  {
+    name: "VFA Bobble Hat",
+    type: "Hat",
+    league: "VFA",
+    rarity: "LEGENDARY",
+    existing: 80,
+    image: "VFA Bobble Hat.png"
+  },
+  {
+    name: "VFA Glasses",
+    type: "Goggles",
+    league: "VFA",
+    rarity: "LEGENDARY",
+    existing: 70,
+    image: "VFA Glasses.png"
+  },
+  {
+    name: "VFA Black Half Mask",
+    type: "Mask",
+    league: "VFA",
+    rarity: "RARE",
+    existing: 100,
+    image: "VFA Black Half Mask.png"
+  },
+  {
+    name: "VFA Black Boot",
+    type: "Boots",
+    league: "VFA",
+    rarity: "LEGENDARY",
+    existing: 80,
+    image: "VFA Black Boot.png"
+  },
+  {
+    name: "VFA Bucket Hat",
+    type: "Hat",
+    league: "VFA",
+    rarity: "RARE",
+    existing: 150,
+    image: "VFA Bucket Hat.png"
+  },
+  {
+    name: "VFA Yellow Full Mask",
+    type: "Mask",
+    league: "VFA",
+    rarity: "LEGENDARY",
+    existing: 70,
+    image: "VFA Yellow Full Mask.png"
+  },
+  {
+    name: "VFA Glove",
+    type: "Gloves",
+    league: "VFA",
+    rarity: "SECRET",
+    existing: 6,
+    image: "VFA Glove.png"
+  },
+  {
+    name: "VFA Yellow Ball",
+    type: "Ball",
+    league: "VFA",
+    rarity: "LEGENDARY",
+    existing: 75,
+    image: "VFA Yellow Ball.png"
+  },
+  {
+    name: "VFA Grey Ball",
+    type: "Ball",
+    league: "VFA",
+    rarity: "LEGENDARY",
+    existing: 90,
+    image: "VFA Grey Ball.png"
+  },
+  {
+    name: "VFA Rising Stars",
+    type: "Boots",
+    league: "VFA",
+    rarity: "RARE",
+    existing: 210,
+    image: "VFA Rising Stars.png"
+  },
+  {
+    name: "VFA All Stars",
+    type: "Boots",
+    league: "VFA",
+    rarity: "RARE",
+    existing: 150,
+    image: "VFA All Stars.png"
+  },
+  {
+    name: "VFA Balon Dor Boot",
+    type: "Boots",
+    league: "VFA",
+    rarity: "SECRET",
+    existing: 15,
+    image: "VFA Balon Dor Boot.png"
+  },
+  {
+    name: "VFA UCL Boot",
+    type: "Boots",
+    league: "VFA",
+    rarity: "LEGENDARY",
+    existing: 60,
+    image: "VFA UCL Boot.png"
+  }
 ];
 
 const container = document.getElementById("items");
-
-// ===============================
-// LOAD SAVED OWNERSHIP
-// ===============================
-
-function loadOwnedStatus() {
-  const saved = JSON.parse(localStorage.getItem("ownedItems")) || {};
-  return saved;
-}
-
-function saveOwnedStatus(status) {
-  localStorage.setItem("ownedItems", JSON.stringify(status));
-}
-
-let ownedStatus = loadOwnedStatus();
 
 // ===============================
 // RENDER FUNCTION
@@ -48,14 +245,11 @@ function renderItems(list) {
       const card = document.createElement("div");
       card.className = "item-card";
 
-      const isOwned = ownedStatus[item.name] === true;
-
       card.innerHTML = `
         <img src="${item.image}" alt="${item.name}" onclick="showDetails('${item.name}')">
         <p>${item.name}</p>
         <label class="owned-label">
-          <input type="checkbox" class="owned-checkbox" ${isOwned ? "checked" : ""} 
-            onchange="toggleOwned('${item.name}', this.checked)">
+          <input type="checkbox" class="owned-checkbox">
           Owned
         </label>
       `;
@@ -66,15 +260,6 @@ function renderItems(list) {
     section.appendChild(row);
     container.appendChild(section);
   });
-}
-
-// ===============================
-// OWNED TOGGLE (SAVES FOREVER)
-// ===============================
-
-function toggleOwned(name, value) {
-  ownedStatus[name] = value;
-  saveOwnedStatus(ownedStatus);
 }
 
 // ===============================
@@ -106,7 +291,6 @@ function filterRarity(rarity) {
 
 function showDetails(name) {
   const item = items.find(i => i.name === name);
-  const isOwned = ownedStatus[name] === true;
 
   container.innerHTML = `
     <div class="item-details">
@@ -116,13 +300,6 @@ function showDetails(name) {
       <p>League: ${item.league}</p>
       <p>Rarity: ${item.rarity}</p>
       <p>Existing: ${item.existing}</p>
-
-      <label class="owned-label">
-        <input type="checkbox" ${isOwned ? "checked" : ""} 
-          onchange="toggleOwned('${item.name}', this.checked)">
-        Owned
-      </label>
-
       <button onclick="location.reload()">Back</button>
     </div>
   `;
